@@ -7,17 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script>
-    window.addEventListener("scroll", function () {
-      var cover = document.getElementById("cover");
-      var scroll = window.scrollY;
-      cover.style.opacity = 1 - scroll / 500;
-    });
-    function toggleTheme() {
-      document.body.classList.toggle("light-mode");
+<script>
+  window.addEventListener("scroll", function () {
+    var cover = document.getElementById("cover");
+    var scroll = window.scrollY;
+    cover.style.opacity = 1 - scroll / 500;
+  });
+
+  function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+    const icon = document.getElementById("theme-icon");
+    if (document.body.classList.contains("light-mode")) {
+      icon.classList.replace("fa-moon", "fa-sun");
+    } else {
+      icon.classList.replace("fa-sun", "fa-moon");
     }
-  </script>
+  }
+</script>
 </head>
+  
 <body class="is-preload">
 <header id="header">
   <nav>
@@ -26,11 +34,15 @@
       <li><a href="#publications">Publications</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button onclick="toggleTheme()">Toggle Theme</button></li>
+      <li>
+        <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+      </li>
     </ul>
   </nav>
 </header>
-
+  
 <section id="cover" class="cover-dark">
   <div class="cover-content">
     <img src="assets/images/prof_pic_1.jpeg" alt="Sonal Shukla" class="cover-portrait" />
