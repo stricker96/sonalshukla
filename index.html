@@ -1,0 +1,75 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Sonal Shukla</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    window.addEventListener("scroll", function () {
+      var cover = document.getElementById("cover");
+      var scroll = window.scrollY;
+      cover.style.opacity = 1 - scroll / 500;
+    });
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+    }
+  </script>
+</head>
+<body class="is-preload">
+<header id="header">
+  <nav>
+    <ul>
+      <li><a href="#banner">Home</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button onclick="toggleTheme()">Toggle Theme</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="cover" class="cover-dark">
+  <div class="cover-content">
+    <img src="assets/images/prof_pic_1.jpeg" alt="Sonal Shukla" class="cover-portrait" />
+    <div class="cover-text">
+      <h1 class="fade-in">Sonal Shukla</h1>
+      <h3 class="fade-in delay">Biomedical Researcher</h3>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<section id="about" class="theme-about"><h2>About Me</h2><p>[Write about yourself]</p></section>
+<section id="projects" class="theme-projects"><h2>Projects</h2><p>[Projects go here]</p></section>
+<section id="experience" class="theme-experience"><h2>Experience</h2><p>[Work experience]</p></section>
+<section id="education" class="theme-education"><h2>Education</h2><p>[Your education]</p></section>
+<section id="publications" class="theme-publications"><h2>Publications</h2><p>[List publications]</p></section>
+<section id="awards" class="theme-awards"><h2>Awards</h2><p>[List awards]</p></section>
+
+<section id="resume" class="theme-resume">
+  <h2>Resume</h2>
+  <p><a href="https://github.com/stricker96/shuklas/blob/main/CV_SHUKLA.pdf" target="_blank">View My Resume (PDF)</a></p>
+</section>
+
+<section id="contact" class="theme-contact">
+  <h2>Contact</h2>
+  <div class="contact-wrapper">
+    <form class="contact-form" method="POST" action="https://formspree.io/f/xwkgykak">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="contact-socials">
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
