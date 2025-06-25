@@ -1,2 +1,266 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* We'll regenerate the full CSS from earlier assistant messages if needed */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #222;
+}
+
+header#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+header#header nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 1em;
+  margin: 1em;
+}
+
+section {
+  padding: 4em 2em;
+  border-radius: 0.5rem;
+  margin-bottom: 2em;
+  background: #1a1a1a;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.02);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+section h2 {
+  font-size: 2.2em;
+  color: #00c6ff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+form button {
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* Fullscreen profile cover */
+#cover {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.cover-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.cover-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 90%;
+  flex-wrap: wrap;
+}
+
+.cover-portrait {
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cover-portrait::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 12px;
+  background: inherit;
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.cover-portrait:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.cover-text h1 {
+  font-size: 3em;
+  margin: 0 0 0.25em 0;
+}
+
+.cover-text h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll down indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll-indicator span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(45deg) translateY(10px);
+  }
+}
+
+/* Contact form layout */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.contact-form {
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.contact-socials {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8em;
+  gap: 1rem;
+  padding-top: 1em;
+}
+
+.contact-socials a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact-socials a:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cover-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cover-text {
+    align-items: center;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form, .contact-socials {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Unified dark section backgrounds */
+.theme-about,
+.theme-projects,
+.theme-experience,
+.theme-education,
+.theme-publications,
+.theme-awards,
+.theme-contact,
+.theme-resume {
+  background: #1a1a1a !important;
+}
