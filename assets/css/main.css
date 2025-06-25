@@ -284,3 +284,20 @@ form button:hover {
   background: #00b4d8;
   transform: scale(1.05);
 }
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+body.light-mode .theme-toggle {
+  color: #111;
+}
+
