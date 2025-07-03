@@ -1,3 +1,4 @@
+
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
@@ -284,20 +285,29 @@ form button:hover {
   background: #00b4d8;
   transform: scale(1.05);
 }
+
 .theme-toggle {
-  background: none;
-  border: none;
-  color: #fff;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4em;
   font-size: 1.3em;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .theme-toggle:hover {
   transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 body.light-mode .theme-toggle {
-  color: #111;
+  background-color: white;
+  color: black;
 }
 
+@media (min-width: 769px) {
+  .cover-content {
+    justify-content: flex-start;
+  }
+}
