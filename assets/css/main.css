@@ -525,7 +525,7 @@ body.light-mode section h2 {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease;
+  transition: transform 1.4s ease-in-out;
 }
 
 .project-card:hover .project-inner,
@@ -590,7 +590,7 @@ body.light-mode section h2 {
   background-image: var(--bg);
   background-size: cover;
   background-position: center;
-  filter: blur(6px) brightness(0.6);
+  filter: blur(3px) brightness(0.6);
   z-index: 0;
   border-radius: 10px;
   opacity: 0.7;
