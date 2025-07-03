@@ -610,3 +610,24 @@ body.light-mode .project-back {
     width: 100%;
   }
 }
+.project-front::before,
+.project-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px) brightness(0.6); /* blur and darken */
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.project-front h3,
+.project-back p {
+  position: relative;
+  z-index: 1;
+}
