@@ -580,6 +580,11 @@ body.light-mode section h2 {
   transform: rotateY(180deg);
 }
 
+/* Background image for Project 1 */
+.project-bg-1 {
+  --bg: url('assets/images/Federated%20Learning%20project.png');
+}
+
 /* Optional: improve text visibility */
 .project-front h3,
 .project-back p {
