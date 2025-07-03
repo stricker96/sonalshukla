@@ -256,7 +256,7 @@ form button:hover {
   }
 }
 
-/* Unified dark section backgrounds */
+/* === Default: Dark mode section background === */
 .theme-about,
 .theme-projects,
 .theme-experience,
@@ -265,7 +265,27 @@ form button:hover {
 .theme-awards,
 .theme-contact,
 .theme-resume {
-  background: #1a1a1a !important;
+  background: #1a1a1a;
+  color: #eee;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* === Light mode overrides === */
+body.light-mode .theme-about,
+body.light-mode .theme-projects,
+body.light-mode .theme-experience,
+body.light-mode .theme-education,
+body.light-mode .theme-publications,
+body.light-mode .theme-awards,
+body.light-mode .theme-contact,
+body.light-mode .theme-resume {
+  background: #f9f9f9;
+  color: #222;
+}
+
+body.light-mode section h2 {
+  color: #0077b6;
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .resume-button {
