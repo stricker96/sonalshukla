@@ -311,3 +311,19 @@ body.light-mode .theme-toggle {
     justify-content: flex-start;
   }
 }
+
+
+/* Navigation link contrast update */
+header#header nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+body.light-mode header#header nav ul li a {
+  color: black;
+}
+
+header#header nav ul li a:hover {
+  color: #00c6ff;
+}
