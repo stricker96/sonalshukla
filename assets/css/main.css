@@ -455,3 +455,14 @@ header#header nav ul li a:hover {
 .scroll-animate.visible {
   animation: fadeInUp 0.8s ease-out forwards;
 }
+/* Make About & other sections light in light-mode */
+body.light-mode .theme-about,
+body.light-mode .theme-projects,
+body.light-mode .theme-experience,
+body.light-mode .theme-education,
+body.light-mode .theme-publications,
+body.light-mode .theme-awards,
+body.light-mode .theme-contact {
+  background: #f9f9f9;
+  color: #222;
+}
