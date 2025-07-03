@@ -432,3 +432,26 @@ header#header nav ul li a:hover {
     max-width: 280px;
   }
 }
+/* ============ */
+/* ANIMATIONS   */
+/* ============ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
