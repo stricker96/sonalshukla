@@ -554,21 +554,6 @@ body.light-mode section h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Blurred background */
-.project-front::before,
-.project-back::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--bg);
-  background-size: cover;
-  background-position: center;
-  filter: blur(6px) brightness(0.6); /* ✅ Blur & darken */
-  z-index: 0;
-  border-radius: 10px;
-  opacity: 0.7;
-}
-
 /* Ensure text stays on top of blur */
 .project-front * ,
 .project-back * {
@@ -592,6 +577,26 @@ body.light-mode section h2 {
 }
 .project-bg-4 {
   --bg: url('assets/images/tweet%20analysis.png');
+}
+
+.project-front::before,
+.project-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.6);
+  z-index: 0;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.project-front *,
+.project-back * {
+  position: relative;
+  z-index: 1;
 }
 
 
