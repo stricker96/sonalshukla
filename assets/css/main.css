@@ -466,3 +466,21 @@ body.light-mode .theme-contact {
   background: #f9f9f9;
   color: #222;
 }
+/* === Section background & text for light mode === */
+body.light-mode .theme-about,
+body.light-mode .theme-projects,
+body.light-mode .theme-experience,
+body.light-mode .theme-education,
+body.light-mode .theme-publications,
+body.light-mode .theme-awards,
+body.light-mode .theme-contact,
+body.light-mode .theme-resume {
+  background-color: #f4f4f4;  /* Soft light background */
+  color: #222;                /* Dark readable text */
+}
+
+/* Optional: tweak section headers in light mode */
+body.light-mode section h2 {
+  color: #0077b6; /* Adjust as needed */
+  border-color: rgba(0, 0, 0, 0.1);
+}
