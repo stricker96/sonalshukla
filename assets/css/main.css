@@ -525,7 +525,7 @@ body.light-mode section h2 {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1.4s ease-in-out;
+  transition: transform 1.0s ease-in-out;
 }
 
 .project-card:hover .project-inner,
