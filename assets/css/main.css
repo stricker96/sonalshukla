@@ -534,82 +534,25 @@ body.light-mode section h2 {
 
 .project-front,
 .project-back {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
   backface-visibility: hidden;
-  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+  background: transparent; /* Allow background image to show */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Blurred background layer */
-.project-front::before,
-.project-back::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px);
-  z-index: 0;
-  opacity: 0.7;
-  background-image: var(--bg);
-}
-
-/* Content stays on top of blur */
-.project-front * ,
-.project-back * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Rotate for back */
-.project-back {
-  transform: rotateY(180deg);
-}
-
-/* Front face styling */
-.project-front {
-  background: #0077b6;
-  color: #fff;
-}
-
-/* Back face styling */
-.project-back {
-  background: #023e8a;
-  color: #fff;
-  transform: rotateY(180deg);
-}
-
-/* Light mode overrides */
-body.light-mode .project-front {
-  background: #caf0f8;
-  color: #111;
-}
-body.light-mode .project-back {
-  background: #90e0ef;
-  color: #111;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .project-card {
-    width: 48%;
-  }
-}
-@media (max-width: 600px) {
-  .project-card {
-    width: 100%;
-  }
-}
 .project-front::before,
 .project-back::before {
   content: "";
@@ -624,10 +567,40 @@ body.light-mode .project-back {
   filter: blur(4px) brightness(0.6); /* blur and darken */
   z-index: 0;
   border-radius: 10px;
+  opacity: 0.8;
 }
 
-.project-front h3,
-.project-back p {
+/* Ensure text is on top of blur */
+.project-front * ,
+.project-back * {
   position: relative;
   z-index: 1;
+}
+
+/* Rotate back face */
+.project-back {
+  transform: rotateY(180deg);
+}
+
+/* Remove hard-coded background colors */
+body.light-mode .project-front {
+  background: transparent;
+  color: #111;
+}
+body.light-mode .project-back {
+  background: transparent;
+  color: #111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .project-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 100%;
+  }
 }
