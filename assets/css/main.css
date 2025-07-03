@@ -327,3 +327,9 @@ body.light-mode header#header nav ul li a {
 header#header nav ul li a:hover {
   color: #00c6ff;
 }
+
+
+/* Light mode: adjust header background */
+body.light-mode header#header {
+  background: rgba(255, 255, 255, 0.95);
+}
