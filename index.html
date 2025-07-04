@@ -139,100 +139,102 @@ backend with MongoDB for real-time data analysis.</p>
 
   </div>
 </section>
-  <section id="experience" class="theme-experience">
+<section id="experience" class="theme-experience">
   <h2>Experience</h2>
 
-  <!-- Carousel wrapper -->
-  <div class="experience-carousel-wrapper">
+  <!-- Experience Slider Container -->
+  <div class="experience-slider">
 
-    <!-- Arrow buttons -->
-    <button class="experience-nav prev">&#10094;</button>
-    <button class="experience-nav next">&#10095;</button>
+    <!-- Inner Carousel Wrapper -->
+    <div class="experience-carousel-wrapper">
 
-    <!-- Inner carousel -->
-    <div class="experience-carousel" id="experienceCarousel">
-      
-      <!-- Slide 1 -->
-      <div class="experience-slide">
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/ub.png" alt="University at Buffalo">
-            <div>
-              <strong>Research Assistant</strong><br>
-              University at Buffalo (Present)
+      <!-- Inner Carousel -->
+      <div class="experience-carousel" id="experienceCarousel">
+
+        <!-- Slide 1 -->
+        <div class="experience-slide">
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/ub.png" alt="University at Buffalo">
+              <div>
+                <strong>Research Assistant</strong><br>
+                University at Buffalo (Present)
+              </div>
             </div>
+            <p>Addressed domain shift in cancer WSI using stain normalization and adversarial training. Built scalable AI models for gigapixel pathology images.</p>
           </div>
-          <p>Addressed domain shift in cancer WSI using stain normalization and adversarial training. Built scalable AI models for gigapixel pathology images.</p>
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/pfizer.png" alt="Pfizer">
+              <div>
+                <strong>Co-op Research Scientist</strong><br>
+                Pfizer (09/2024–04/2025)
+              </div>
+            </div>
+            <p>Developed deep learning pipelines for WSI-based cancer analysis. Integrated AI insights into oncology workflows.</p>
+          </div>
         </div>
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/pfizer.png" alt="Pfizer">
-            <div>
-              <strong>Co-op Research Scientist</strong><br>
-              Pfizer (09/2024–04/2025)
+
+        <!-- Slide 2 -->
+        <div class="experience-slide">
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/iron.png" alt="Iron Mountain">
+              <div>
+                <strong>Digital Pathology Intern</strong><br>
+                Iron Mountain (06/2024–08/2024)
+              </div>
             </div>
+            <p>Applied AI for cell segmentation in pathology images. Automated preprocessing pipelines to improve diagnostic accuracy and reproducibility.</p>
           </div>
-          <p>Developed deep learning pipelines for WSI-based cancer analysis. Integrated AI insights into oncology workflows.</p>
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/caimif.png" alt="CAIMIF">
+              <div>
+                <strong>Guest Lecture</strong><br>
+                Center for AI in Medicine, Imaging & Forensics (CAIMIF) India (2024)
+              </div>
+            </div>
+            <p>Presented federated learning approaches in digital pathology with privacy-preserving AI and batch effect mitigation.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="experience-slide">
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/ub.png" alt="Buffalo">
+              <div>
+                <strong>Guest Lecture</strong><br>
+                University at Buffalo (Spring 2024)
+              </div>
+            </div>
+            <p>Lectured on machine learning for biomedical data: preprocessing, feature engineering, and clinical integration.</p>
+          </div>
+          <div class="experience-card">
+            <div class="experience-header">
+              <img src="assets/images/logos/isro.png" alt="ISRO">
+              <div>
+                <strong>DevOps Intern</strong><br>
+                ISRO (06/2018–12/2018)
+              </div>
+            </div>
+            <p>Created automated test pipelines using Selenium to support DevOps operations and reduce manual effort.</p>
+          </div>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="experience-slide">
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/iron.png" alt="Iron Mountain">
-            <div>
-              <strong>Digital Pathology Intern</strong><br>
-              Iron Mountain (06/2024–08/2024)
-            </div>
-          </div>
-          <p>Applied AI for cell segmentation in pathology images. Automated preprocessing pipelines to improve diagnostic accuracy and reproducibility.</p>
-        </div>
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/caimif.png" alt="CAIMIF">
-            <div>
-              <strong>Guest Lecture</strong><br>
-              Center for AI in Medicine, Imaging & Forensics (CAIMIF) India (2024)
-            </div>
-          </div>
-          <p>Presented federated learning approaches in digital pathology with privacy-preserving AI and batch effect mitigation.</p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="experience-slide">
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/ub.png" alt="Buffalo">
-            <div>
-              <strong>Guest Lecture</strong><br>
-              University at Buffalo (Spring 2024)
-            </div>
-          </div>
-          <p>Lectured on machine learning for biomedical data: preprocessing, feature engineering, and clinical integration.</p>
-        </div>
-        <div class="experience-card">
-          <div class="experience-header">
-            <img src="assets/images/logos/isro.png" alt="ISRO">
-            <div>
-              <strong>DevOps Intern</strong><br>
-              ISRO (06/2018–12/2018)
-            </div>
-          </div>
-          <p>Created automated test pipelines using Selenium to support DevOps operations and reduce manual effort.</p>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Dots for navigation -->
+    <!-- ⬅️ Left and Right Arrow Buttons -->
+    <button class="experience-nav prev" aria-label="Previous">&#10094;</button>
+    <button class="experience-nav next" aria-label="Next">&#10095;</button>
+
+    <!-- Navigation Dots -->
     <div class="experience-dots">
       <span class="dot active" data-slide="0"></span>
       <span class="dot" data-slide="1"></span>
       <span class="dot" data-slide="2"></span>
     </div>
-
   </div>
 </section>
 
