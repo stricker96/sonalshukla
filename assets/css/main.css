@@ -584,7 +584,7 @@ body.light-mode section h2 {
 
 .project-front,
 .project-back {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   filter: brightness(0.7); /* Less intense than blur */
