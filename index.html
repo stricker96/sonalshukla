@@ -139,26 +139,38 @@ backend with MongoDB for real-time data analysis.</p>
 
   </div>
 </section>
-  <section id="experience" class="theme-experience scroll-animate">
+  <section id="experience" class="theme-experience">
   <h2>Experience</h2>
 
+  <!-- Carousel wrapper -->
   <div class="experience-carousel-wrapper">
-    <button class="experience-nav prev" aria-label="Previous">&#10094;</button>
 
-    <div class="experience-carousel">
+    <!-- Arrow buttons -->
+    <button class="experience-nav prev">&#10094;</button>
+    <button class="experience-nav next">&#10095;</button>
+
+    <!-- Inner carousel -->
+    <div class="experience-carousel" id="experienceCarousel">
+      
       <!-- Slide 1 -->
       <div class="experience-slide">
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/ub.png" alt="UB" />
-            <h3>Research Assistant<br><span>University at Buffalo (Present)</span></h3>
+            <img src="assets/logos/buffalo.png" alt="University at Buffalo">
+            <div>
+              <strong>Research Assistant</strong><br>
+              University at Buffalo (Present)
+            </div>
           </div>
           <p>Addressed domain shift in cancer WSI using stain normalization and adversarial training. Built scalable AI models for gigapixel pathology images.</p>
         </div>
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/pfizer.png" alt="Pfizer" />
-            <h3>Co-op Research Scientist<br><span>Pfizer (09/2024–04/2025)</span></h3>
+            <img src="assets/logos/pfizer.png" alt="Pfizer">
+            <div>
+              <strong>Co-op Research Scientist</strong><br>
+              Pfizer (09/2024–04/2025)
+            </div>
           </div>
           <p>Developed deep learning pipelines for WSI-based cancer analysis. Integrated AI insights into oncology workflows.</p>
         </div>
@@ -168,15 +180,21 @@ backend with MongoDB for real-time data analysis.</p>
       <div class="experience-slide">
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/iron.png" alt="Iron Mountain" />
-            <h3>Digital Pathology Intern<br><span>Iron Mountain (06/2024–08/2024)</span></h3>
+            <img src="assets/logos/ironmountain.png" alt="Iron Mountain">
+            <div>
+              <strong>Digital Pathology Intern</strong><br>
+              Iron Mountain (06/2024–08/2024)
+            </div>
           </div>
           <p>Applied AI for cell segmentation in pathology images. Automated preprocessing pipelines to improve diagnostic accuracy and reproducibility.</p>
         </div>
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/caimif.png" alt="CAIMIF" />
-            <h3>Guest Lecture<br><span>CAIMIF India (2024)</span></h3>
+            <img src="assets/logos/caimif.png" alt="CAIMIF">
+            <div>
+              <strong>Guest Lecture</strong><br>
+              Center for AI in Medicine, Imaging & Forensics (CAIMIF) India (2024)
+            </div>
           </div>
           <p>Presented federated learning approaches in digital pathology with privacy-preserving AI and batch effect mitigation.</p>
         </div>
@@ -186,56 +204,37 @@ backend with MongoDB for real-time data analysis.</p>
       <div class="experience-slide">
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/ub.png" alt="UB" />
-            <h3>Guest Lecture<br><span>University at Buffalo (Spring 2024)</span></h3>
+            <img src="assets/logos/buffalo.png" alt="Buffalo">
+            <div>
+              <strong>Guest Lecture</strong><br>
+              University at Buffalo (Spring 2024)
+            </div>
           </div>
           <p>Lectured on machine learning for biomedical data: preprocessing, feature engineering, and clinical integration.</p>
         </div>
         <div class="experience-card">
           <div class="experience-header">
-            <img src="assets/images/orgs/isro.png" alt="ISRO" />
-            <h3>DevOps Intern<br><span>ISRO (06/2018–12/2018)</span></h3>
+            <img src="assets/logos/isro.png" alt="ISRO">
+            <div>
+              <strong>DevOps Intern</strong><br>
+              ISRO (06/2018–12/2018)
+            </div>
           </div>
           <p>Created automated test pipelines using Selenium to support DevOps operations and reduce manual effort.</p>
         </div>
       </div>
+
     </div>
 
-    <button class="experience-nav next" aria-label="Next">&#10095;</button>
-  </div>
+    <!-- Dots for navigation -->
+    <div class="experience-dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
 
-  <!-- ✅ Timeline Dots -->
-  <div class="experience-dots">
-    <span class="dot active" data-slide="0"></span>
-    <span class="dot" data-slide="1"></span>
-    <span class="dot" data-slide="2"></span>
   </div>
 </section>
-
-  <section id="education" class="theme-education"><h2>Education</h2><p>[Your education]</p></section>
-  <section id="publications" class="theme-publications"><h2>Publications</h2><p>[List publications]</p></section>
-  <section id="awards" class="theme-awards"><h2>Awards</h2><p>[List awards]</p></section>
-
-  <section id="contact" class="theme-contact">
-    <h2>Contact</h2>
-    <div class="contact-wrapper">
-      <form action="https://formsubmit.co/stricker2020@outlook.com" method="POST">
-        <input type="hidden" name="_next" value="https://stricker96.github.io/sonalshukla/thankyou.html">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-socials">
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://scholar.google.com/" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-      </div>
-    </div>
-  </section>
 
   <!-- ✅ ADDED scroll animation script -->
   <script>
