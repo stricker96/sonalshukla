@@ -599,12 +599,26 @@ body.light-mode section h2 {
 }
 
 
-/* Optional: improve text visibility */
 .project-front h3,
 .project-back p {
   color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  font-weight: 600;
+  font-size: 1.4em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.5em 1em;
+  background: rgba(0, 0, 0, 0.4); /* Adds contrast over image */
+  border-radius: 8px;
 }
+
+body.light-mode .project-front h3,
+body.light-mode .project-back p {
+  color: #111;
+  text-shadow: none;
+  background: rgba(255, 255, 255, 0.7);
+}
+
 
 /* Remove hard-coded background colors */
 body.light-mode .project-front {
