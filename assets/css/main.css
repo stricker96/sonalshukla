@@ -662,6 +662,99 @@ body.light-mode .project-back {
   position: relative;
   z-index: 1;
 }
+/* === Experience Carousel Container === */
+.experience-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* === Carousel Inner: holds all slides side by side === */
+.experience-carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 300%; /* 3 slides => 100% * 3 */
+}
+
+/* === Each Slide === */
+.experience-slide {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  /* Display 2 items vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* === Individual Experience Card === */
+.experience-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+body.dark-mode .experience-card,
+body.light-mode .experience-card {
+  background: #f9f9f9;
+  color: #111;
+}
+
+body.dark-mode .experience-card {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+/* Hover effect */
+.experience-card:hover {
+  transform: scale(1.01);
+}
+
+/* === Responsive Option: horizontal on large screens === */
+@media (min-width: 768px) {
+  .experience-slide {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .experience-card {
+    width: 45%;
+  }
+}
+
+/* === Arrow Buttons === */
+.experience-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  background-color: rgba(0, 198, 255, 0.1);
+  color: #00c6ff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.4em 0.6em;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.experience-arrow:hover {
+  background-color: rgba(0, 198, 255, 0.2);
+}
+
+.experience-arrow.left {
+  left: 10px;
+}
+
+.experience-arrow.right {
+  right: 10px;
+}
+
+/* === Timeline Dots === */
 .experience-dots {
   text-align: center;
   margin-top: 1em;
@@ -682,7 +775,7 @@ body.light-mode .project-back {
   background-color: #00c6ff;
 }
 
-/* Logo + Title Layout */
+/* === Logo + Title Layout === */
 .experience-header {
   display: flex;
   align-items: center;
