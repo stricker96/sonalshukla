@@ -582,18 +582,14 @@ body.light-mode section h2 {
   --bg: url('assets/images/tweet%20analysis.png'), url('assets/images/fallback4.png');
 }
 
-.project-front::before,
-.project-back::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--bg); 
+.project-front,
+.project-back {
   background-size: cover;
   background-position: center;
-  filter: blur(3px) brightness(0.6);
-  z-index: 0;
+  background-repeat: no-repeat;
+  filter: brightness(0.7); /* Less intense than blur */
   border-radius: 10px;
-  opacity: 0.7;
+  transition: background-image 0.5s ease;
 }
 
 .project-front *,
