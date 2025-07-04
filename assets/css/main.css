@@ -567,19 +567,19 @@ body.light-mode section h2 {
 
 /* === Project Background Images with fallback === */
 .project-bg-1 {
-  --bg: url('assets/images/Federated%20Learning%20project.png'), url('https://via.placeholder.com/400x300?text=Federated+Learning');
+  --bg: url('assets/images/Federated%20Learning%20project.png'), url('assets/images/fallback1.png');
 }
 
 .project-bg-2 {
-  --bg: url('assets/images/info%20extraction%20bert.png'), url('https://via.placeholder.com/400x300?text=Info+Extraction');
+  --bg: url('assets/images/info%20extraction%20bert.png'), url('assets/images/fallback2.png');
 }
 
 .project-bg-3 {
-  --bg: url('assets/images/workplace%20safety.png'), url('https://via.placeholder.com/400x300?text=Workplace+Safety');
+  --bg: url('assets/images/workplace%20safety.png'), url('assets/images/fallback3.png');
 }
 
 .project-bg-4 {
-  --bg: url('assets/images/tweet%20analysis.png'), url('https://via.placeholder.com/400x300?text=Tweet+Analysis');
+  --bg: url('assets/images/tweet%20analysis.png'), url('assets/images/fallback4.png');
 }
 
 .project-front::before,
@@ -587,7 +587,7 @@ body.light-mode section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--bg);
+  background-image: var(--bg); 
   background-size: cover;
   background-position: center;
   filter: blur(3px) brightness(0.6);
