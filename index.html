@@ -139,8 +139,79 @@ backend with MongoDB for real-time data analysis.</p>
 
   </div>
 </section>
-  
-  <section id="experience" class="theme-experience"><h2>Experience</h2><p>[Work experience]</p></section>
+  <section id="experience" class="theme-experience scroll-animate">
+  <h2>Experience</h2>
+
+  <div class="experience-carousel-wrapper">
+    <button class="experience-nav prev" aria-label="Previous">&#10094;</button>
+
+    <div class="experience-carousel">
+      <!-- Slide 1 -->
+      <div class="experience-slide">
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/ub.png" alt="UB" />
+            <h3>Research Assistant<br><span>University at Buffalo (Present)</span></h3>
+          </div>
+          <p>Addressed domain shift in cancer WSI using stain normalization and adversarial training. Built scalable AI models for gigapixel pathology images.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/pfizer.png" alt="Pfizer" />
+            <h3>Co-op Research Scientist<br><span>Pfizer (09/2024–04/2025)</span></h3>
+          </div>
+          <p>Developed deep learning pipelines for WSI-based cancer analysis. Integrated AI insights into oncology workflows.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="experience-slide">
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/iron.png" alt="Iron Mountain" />
+            <h3>Digital Pathology Intern<br><span>Iron Mountain (06/2024–08/2024)</span></h3>
+          </div>
+          <p>Applied AI for cell segmentation in pathology images. Automated preprocessing pipelines to improve diagnostic accuracy and reproducibility.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/caimif.png" alt="CAIMIF" />
+            <h3>Guest Lecture<br><span>CAIMIF India (2024)</span></h3>
+          </div>
+          <p>Presented federated learning approaches in digital pathology with privacy-preserving AI and batch effect mitigation.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="experience-slide">
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/ub.png" alt="UB" />
+            <h3>Guest Lecture<br><span>University at Buffalo (Spring 2024)</span></h3>
+          </div>
+          <p>Lectured on machine learning for biomedical data: preprocessing, feature engineering, and clinical integration.</p>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <img src="assets/images/orgs/isro.png" alt="ISRO" />
+            <h3>DevOps Intern<br><span>ISRO (06/2018–12/2018)</span></h3>
+          </div>
+          <p>Created automated test pipelines using Selenium to support DevOps operations and reduce manual effort.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="experience-nav next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <!-- ✅ Timeline Dots -->
+  <div class="experience-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+  </div>
+</section>
+
   <section id="education" class="theme-education"><h2>Education</h2><p>[Your education]</p></section>
   <section id="publications" class="theme-publications"><h2>Publications</h2><p>[List publications]</p></section>
   <section id="awards" class="theme-awards"><h2>Awards</h2><p>[List awards]</p></section>
@@ -180,5 +251,41 @@ backend with MongoDB for real-time data analysis.</p>
 
     document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
   </script>
+  <script>
+  const slides = document.querySelectorAll(".experience-slide");
+  const dots = document.querySelectorAll(".dot");
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    const offset = index * -100;
+    document.querySelector(".experience-carousel").style.transform = `translateX(${offset}%)`;
+    currentSlide = index;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  document.querySelector(".experience-nav.next").addEventListener("click", () => {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  });
+
+  document.querySelector(".experience-nav.prev").addEventListener("click", () => {
+    const prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  });
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.getAttribute("data-slide"));
+      showSlide(index);
+    });
+  });
+
+  // Optional auto-slide every 10s
+  setInterval(() => {
+    showSlide((currentSlide + 1) % slides.length);
+  }, 10000);
+</script>
 </body>
 </html>
