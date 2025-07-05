@@ -1,13 +1,18 @@
 const dots = document.querySelectorAll(".dot");
 let currentSlide = 0;
+let isTransitioning = false;
 
 function showSlide(index) {
-  const slides = document.querySelectorAll(".experience-slide"); // 🛠 Re-query slides every time
+  const slides = document.querySelectorAll(".experience-slide");
   const offset = index * -100;
   const carousel = document.querySelector(".experience-carousel");
-  
-  if (!carousel || slides.length === 0) return; // safety check
 
+  if (!carousel || slides.length === 0) return;
+
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  carousel.style.transition = "transform 0.6s ease-in-out";
   carousel.style.transform = `translateX(${offset}%)`;
   currentSlide = index;
 
@@ -15,6 +20,9 @@ function showSlide(index) {
   if (dots[index]) {
     dots[index].classList.add("active");
   }
+
+  // Unlock after transition
+  setTimeout(() => isTransitioning = false, 650);
 }
 
 document.querySelector(".experience-nav.next").addEventListener("click", () => {
@@ -36,7 +44,7 @@ dots.forEach(dot => {
   });
 });
 
-// Optional auto-slide every 10s
+// Optional auto-slide (can comment this out if unwanted)
 setInterval(() => {
   const slides = document.querySelectorAll(".experience-slide");
   showSlide((currentSlide + 1) % slides.length);
