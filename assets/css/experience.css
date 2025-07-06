@@ -1,0 +1,66 @@
+
+.experience-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.experience-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.experience-slide {
+  display: flex;
+  flex: 0 0 100%;
+  gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.experience-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.experience-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.experience-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.experience-company {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.experience-description {
+  font-size: 0.92rem;
+  color: #333;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
