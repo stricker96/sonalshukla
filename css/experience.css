@@ -15,7 +15,6 @@
 .experience-carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .experience-slide {
