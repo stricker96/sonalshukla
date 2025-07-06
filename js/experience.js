@@ -1,48 +1,43 @@
-// EXPERIENCE SLIDER LOGIC
+// js/experience.js
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".experience-carousel");
+  const slides = document.querySelectorAll(".experience-slide");
+  const prevBtn = document.querySelector(".experience-nav.prev");
+  const nextBtn = document.querySelector(".experience-nav.next");
+  const dots = document.querySelectorAll(".dot");
+  let currentSlide = 0;
+  let isTransitioning = false;
+  const totalSlides = slides.length;
 
-const carousel = document.querySelector(".experience-carousel");
-const slides = document.querySelectorAll(".experience-slide");
-const prevButton = document.querySelector(".experience-nav.prev");
-const nextButton = document.querySelector(".experience-nav.next");
-const dots = document.querySelectorAll(".dot");
+  function updateCarousel() {
+    const offset = -100 * currentSlide;
+    carousel.style.transform = `translateX(${offset}%)`;
 
-let currentSlide = 0;
-let isTransitioning = false;
-const totalSlides = slides.length;
+    dots.forEach(dot => dot.classList.remove("active"));
+    if (dots[currentSlide]) dots[currentSlide].classList.add("active");
+  }
 
-// Show selected slide
-function showSlide(index) {
-  if (isTransitioning) return;
-  isTransitioning = true;
+  function showSlide(index) {
+    if (index < 0 || index >= totalSlides || isTransitioning) return;
+    isTransitioning = true;
+    currentSlide = index;
+    updateCarousel();
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 500);
+  }
 
-  currentSlide = (index + totalSlides) % totalSlides;
-  const offset = currentSlide * -100;
-  carousel.style.transform = `translateX(${offset}%)`;
+  prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+  nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
 
-  dots.forEach(dot => dot.classList.remove("active"));
-  if (dots[currentSlide]) dots[currentSlide].classList.add("active");
+  dots.forEach(dot =>
+    dot.addEventListener("click", e => {
+      const index = parseInt(e.target.getAttribute("data-slide"));
+      showSlide(index);
+    })
+  );
 
-  setTimeout(() => {
-    isTransitioning = false;
-  }, 600);
-}
-
-// Navigate arrows
-prevButton.addEventListener("click", () => showSlide(currentSlide - 1));
-nextButton.addEventListener("click", () => showSlide(currentSlide + 1));
-
-// Dots navigation
-dots.forEach(dot => {
-  dot.addEventListener("click", () => {
-    const slideIndex = parseInt(dot.getAttribute("data-slide"));
-    showSlide(slideIndex);
-  });
+  setInterval(() => {
+    showSlide((currentSlide + 1) % totalSlides);
+  }, 6000);
 });
-
-// Auto-slide every 6 seconds
-setInterval(() => {
-  showSlide(currentSlide + 1);
-}, 6000);
-
-// Init
-showSlide(currentSlide);
