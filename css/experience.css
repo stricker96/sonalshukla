@@ -8,7 +8,7 @@
 .experience-carousel {
   display: flex;
   transition: transform 0.6s ease-in-out;
-  width: calc(100% * 6); /* 6 slides total */
+  width: calc(100% * 3); /* 3 slides total */
 }
 
 .experience-slide {
