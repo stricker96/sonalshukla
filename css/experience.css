@@ -1,103 +1,117 @@
-/* experience.css */
+/* Carousel Layout Fix */
 .experience-slider {
   position: relative;
-  overflow: hidden;
   width: 100%;
-  margin: 2rem auto;
-  max-width: 1000px;
+  overflow: hidden;
+  padding: 2rem 0;
 }
 
 .experience-carousel-wrapper {
-  width: 100%;
   overflow: hidden;
 }
 
 .experience-carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 300%; /* 3 slides x 100% */
 }
 
+/* Slide styling: Two cards per slide */
 .experience-slide {
-  display: flex;
   flex: 0 0 100%;
-  gap: 2rem;
-  padding: 1rem 0;
-  box-sizing: border-box;
+  display: flex;
   justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
+/* Card Styling */
 .experience-card {
-  flex: 0 0 48%;
-  background-color: var(--background-color, #f4f4f4);
-  padding: 1.5rem;
+  flex: 1 1 48%;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+/* Header Styling */
 .experience-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .experience-header img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .experience-header strong {
   font-size: 1.1rem;
-  display: block;
-  color: #222;
+  font-weight: 600;
 }
 
+.experience-header div {
+  line-height: 1.4;
+}
+
+/* Description Styling */
 .experience-card p {
-  margin-top: 1rem;
-  line-height: 1.5;
+  margin: 0;
   font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
 }
 
+/* Nav Buttons */
 .experience-nav {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  background: transparent;
+  background-color: #00c8ff;
+  color: white;
   border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
   cursor: pointer;
-  z-index: 2;
-  color: #444;
+  z-index: 1;
 }
 
 .experience-nav.prev {
-  left: 0.5rem;
+  left: 1rem;
 }
 
 .experience-nav.next {
-  right: 0.5rem;
+  right: 1rem;
 }
 
+/* Dots */
 .experience-dots {
   text-align: center;
   margin-top: 1rem;
 }
 
-.dot {
+.experience-dots .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 0 6px;
   background-color: #bbb;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.dot.active {
-  background-color: #333;
+.experience-dots .dot.active {
+  background-color: #00c8ff;
 }
